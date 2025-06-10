@@ -6,15 +6,21 @@ body {
   background-color: #ffffff;
   color: #333;
   line-height: 1.6;
+  font-size: 18px; /* Slightly larger base font size for clarity */
 }
 
 /* Hero Section */
 .hero {
   text-align: center;
   background-color: #eaf6ff; /* soft light blue background */
+  padding: 40px 20px; /* Added padding */
+  background-image: linear-gradient(to bottom right, #eaf6ff, #f3eaff); /* Soft gradient */
 }
 
 .hero img {
+  width: 300px; /* smaller image for better fit */
+  height: 300px; /* maintain aspect ratio */
+  object-fit: cover; /* ensures the image covers the area without distortion */
   border-radius: 50%;
   border: solid 4px #16213e;
   margin-bottom: 20px;
@@ -23,23 +29,31 @@ body {
 .hero h1 {
   margin: 20px 0 10px;
   color: #16213e;
+  font-size: 4em; /* Much larger */
+  font-weight: bold;
 }
 
 .hero p {
   margin: 10px 0 20px;
   color: #555;
+  font-size: 1.3em; /* Slightly larger for readability */
 }
 
 .hero button {
   background-color: #533483; 
   color: #fff;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px;
   cursor: pointer;
+  font-size: 2.5em; /* Much larger button text */
+  padding: 16px 36px; /* Bigger button */
+  transition: box-shadow 0.2s, background-color 0.2s, transform 0.2s; /* Added transform transition */
 }
 
 .hero button:hover {
   background-color: #362056; 
+  box-shadow: 0 8px 18px #bdbdbd;
+  transform: scale(1.06);
 }
 
 /* Product Description Section */
@@ -48,7 +62,8 @@ body {
   text-align: center;
   background-color: #ffffff;
   margin: 40px auto;
-  max-width: 800px;
+  max-width: 900px;
+  font-size: 1.25em; /* Slightly larger for readability */
 }
 
 /* How It Works Section */
@@ -56,30 +71,51 @@ body {
   padding: 40px 20px;
   background-color: #f7f7f7;
   text-align: center;
+  /* Remove border-radius, box-shadow, margin, and max-width for banner style */
+  border-radius: 0;
+  box-shadow: none;
+  margin: 0;
+  max-width: none;
 }
 
 .how-it-works h2 {
   margin-top: 0;
   margin-bottom: 20px;
-  color: #0f3460
+  color: #0f3460;
+  font-size: 2em;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
 
 .how-it-works ol {
   list-style: decimal;
-  padding-left: 20px;
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto;
   color: #333;
   text-align: left;
+  font-size: 1.15em;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 1px 6px #e0e0e0;
+  padding: 30px;
+  padding-left: 70px; /* Increase this value for more space on the left */
 }
 
 .how-it-works li {
-  margin-bottom: 15px;
-  line-height: 1.6;
+  margin-bottom: 18px;
+  line-height: 1.7;
+  position: relative;
+  padding-left: 35px;
 }
 
-strong {
+.how-it-works ol li::marker {
+  font-size: 1.5em;
+  font-weight: bold;
   color: #533483;
+}
+
+.how-it-works li strong {
+  color: #0f3460;
 }
 
 /* Features Section */
@@ -94,22 +130,51 @@ strong {
 .features h2 {
   margin-bottom: 20px;
   color: #1a1a2e;
+  font-size: 2em;
+  font-weight: bold;
 }
 
-.features ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: left;
-  color: #333;
+/* Table layout for features */
+.features-table {
+  margin: 0 auto;
+  border-collapse: separate;
+  border-spacing: 20px 20px;
+  table-layout: fixed;
+  width: 100%;
+  max-width: 800px; /* increased max-width for more horizontal space */
 }
 
-.features li {
-  padding: 15px 0;
-  border-bottom: 1px solid #e0e0e0;
+.features-table td {
+  text-align: center;
+  width: 50%;
+  vertical-align: top;
+  height: 220px; /* set a fixed height for equal bubble height */
 }
 
-.features li strong {
+/* Bubble style for each feature */
+.feature-bubble {
+  background-color: #f3eaff;
+  border-radius: 30px;
+  padding: 30px 30px; /* increased horizontal padding */
+  box-shadow: 0 2px 8px #e0e0e0;
+  transition: box-shadow 0.2s, background-color 0.2s, transform 0.2s; /* Added transform transition */
+  font-size: 1.1em;
+  border: 2px solid #e0e0e0;
+  min-height: 160px;
+  height: 100%;
+  box-sizing: border-box;
   display: block;
-  margin-bottom: 5px;
+  width: 100%; /* stretch bubble to fill cell */
+}
+
+.feature-bubble:hover {
+  background-color: #eaf6ff;
+  box-shadow: 0 12px 24px #bdbdbd;
+  border-color: #533483;
+  transform: scale(1.06);
+}
+
+.features ul,
+.features li {
+  display: none; /* Hide the old list layout */
 }
