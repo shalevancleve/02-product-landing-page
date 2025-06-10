@@ -1,8 +1,12 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Baloo+2:700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+
 /* Global Styles */
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Quicksand', Arial, sans-serif;
   background-color: #ffffff;
   color: #333;
   line-height: 1.6;
@@ -14,7 +18,7 @@ body {
   text-align: center;
   background-color: #eaf6ff; /* soft light blue background */
   padding: 40px 20px; /* Added padding */
-  background-image: linear-gradient(to bottom right, #eaf6ff, #f3eaff); /* Soft gradient */
+  background-image: linear-gradient(to bottom right, #eaf6ff, #6a528a); /* Soft gradient */
 }
 
 .hero img {
@@ -31,11 +35,12 @@ body {
   color: #16213e;
   font-size: 4em; /* Much larger */
   font-weight: bold;
+  font-family: 'Baloo 2', cursive, Arial, sans-serif;
 }
 
 .hero p {
   margin: 10px 0 20px;
-  color: #555;
+  color: #ffffff;
   font-size: 1.3em; /* Slightly larger for readability */
 }
 
@@ -85,6 +90,7 @@ body {
   font-size: 2em;
   font-weight: bold;
   letter-spacing: 1px;
+  font-family: 'Baloo 2', cursive, Arial, sans-serif;
 }
 
 .how-it-works ol {
@@ -132,6 +138,7 @@ body {
   color: #1a1a2e;
   font-size: 2em;
   font-weight: bold;
+  font-family: 'Baloo 2', cursive, Arial, sans-serif;
 }
 
 /* Table layout for features */
